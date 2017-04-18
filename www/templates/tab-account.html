@@ -1,0 +1,23 @@
+<ion-view view-title="Account">
+  <ion-content class="padding">
+    <div class="card" ng-show="has_user">
+      <div class="item item-text-wrap">
+        <ul>
+          <li><strong>username:</strong> {{ user.username }}</li>
+          <li><strong>company:</strong> {{ user.company }}</li>
+          <li><strong>branch:</strong> {{ user.branch }}</li>
+          <li><strong>department:</strong> {{ user.department }}</li>
+          <li><strong>section:</strong> {{ user.section }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <button ng-click="deleteUser()" class="button button-block button-assertive">
+      Delete User Data
+    </button>
+
+    <button ng-click="deleteCars()" class="button button-block button-dark">
+      Delete Car Data
+    </button>
+  </ion-content>
+</ion-view>

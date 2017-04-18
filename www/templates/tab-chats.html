@@ -1,0 +1,40 @@
+<ion-view view-title="Cars" ng-controller="ChatsCtrl as car_ctrl">
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" ng-model="car_ctrl.car_id" placeholder="Car ID">
+      </label>
+      <label class="item item-input">
+        <input type="text" ng-model="car_ctrl.car_name" placeholder="Car Name">
+      </label>
+
+      <ion-checkbox ng-model="car_ctrl.is_favorite">Favorite?</ion-checkbox>
+
+      <button ng-click="addCar()" class="button button-block button-positive">
+        Add
+      </button>
+    </div>
+
+    <h4>Last Added Car</h4>
+    <ul class="list">
+      <li class="item" ng-repeat="car in car_ctrl.cars">
+        {{ car.name }}
+      </li>
+    </ul>
+
+    <h4>Favorite Cars</h4>
+    <ul class="list">
+      <li class="item" ng-repeat="car in car_ctrl.cars">
+        {{ car.name }}
+      </li>
+    </ul>
+
+    <h4>Cars</h4>
+    <ul class="list">
+      <li class="item" ng-repeat="car in car_ctrl.cars">
+        {{ car.name }}
+      </li>
+    </ul>
+
+  </ion-content>
+</ion-view>
